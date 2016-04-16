@@ -3,7 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="login_sucess">Success</string>
     <string name="login_fail">Failure</string>
-    <string name="username">jdoe</string>
+    <string name="email">jdoe</string>
     <string name="password">welcome1</string>
     <string name="title_activity_login">Sign in</string>
 

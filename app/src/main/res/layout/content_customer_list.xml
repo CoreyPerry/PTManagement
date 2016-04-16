@@ -44,41 +44,5 @@
                 android:layout_height="wrap_content"
                 android:text="View Profile"/>
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:text="John Doe"
-                android:textAppearance="?android:attr/textAppearanceMedium"/>
-            <Button
-                android:id="@+id/view_Profile_Button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="View Profile"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:text="Jack Guiness"
-                android:textAppearance="?android:attr/textAppearanceMedium"/>
-            <Button
-                android:id="@+id/view_Profile_Button3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="View Profile"/>
-        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
