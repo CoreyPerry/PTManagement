@@ -100,23 +100,21 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mProgressView = findViewById(R.id.login_progress);
     }
 
-    /*@Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_options_menu, menu);
-        menu.findItem(R.menu.main_options_menu_item).setIntent() {
-            new Intent(Login.this, SettingsActivity.class)
-        }
         return true;
-    }*/
+    }
 
-    /*@Override
+    @Override
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
-        if (id == R.id.settings_menu_items){
+        if (id == R.id.logout_menu_item){
             super.onOptionsItemSelected(item);
-            startActivity();
+            startActivity(item.getIntent());
         }
-    }*/
+        return true;
+    }
 
     private void populateAutoComplete() {
         if (!mayRequestContacts()) {
