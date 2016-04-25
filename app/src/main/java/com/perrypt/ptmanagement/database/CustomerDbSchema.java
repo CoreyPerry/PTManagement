@@ -11,16 +11,30 @@ import android.provider.BaseColumns;
  * Created by Grayscript on 4/24/2016.
  */
 public class CustomerDbSchema {
-   public static final class customerContract {
-       public customerContract(){}
+   public static final class customerTable {
+       public customerTable(){}
 
-       public static abstract class customerEntry implements BaseColumns {
+       public static final class Cols {
+           public static final String TABLE_NAME = "customers";
+           public static final String COLUMN_NAME_CUSTOMER_NAME = "name";
+           public static final String COLUMN_NAME_CUSTOMER_HEIGHT = "height";
+           public static final String COLUMN_NAME_CUSTOMER_WEIGHT = "weight";
+           public static final String COLUMN_NAME_CUSTOMER_AGE = "age";
+       }
+
+       public static class customerEntry implements BaseColumns {
            public static final String TABLE_NAME = "customers";
            public static final String COLUMN_NAME_CUSTOMER_NAME = "name";
            public static final String COLUMN_NAME_CUSTOMER_HEIGHT = "height";
            public static final String COLUMN_NAME_CUSTOMER_WEIGHT = "weight";
            public static final String COLUMN_NAME_CUSTOMER_AGE = "age";
 
+       }
+
+       private CustomerEntryDbHelper mCustomerEntryDbHelper;
+
+       public void closeDatabase() {
+           mCustomerEntryDbHelper.close();
        }
 
        private static final String TEXT_TYPE = "TEXT";
@@ -35,12 +49,12 @@ public class CustomerDbSchema {
        private static final String SQL_DELETE_ENTRIES =
                "DROP TABLE IF EXISTS" + customerEntry.TABLE_NAME;
 
-       public class customerEntryDbHelper extends SQLiteOpenHelper {
+       public class CustomerEntryDbHelper extends SQLiteOpenHelper {
 
            public static final int DATABASE_VERSION = 1;
            public static final String DATABASE_NAME = "customerEntry.db";
 
-           public customerEntryDbHelper(Context context) {
+           public CustomerEntryDbHelper(Context context) {
                super(context, DATABASE_NAME, null, DATABASE_VERSION);
            }
 
@@ -55,8 +69,5 @@ public class CustomerDbSchema {
                onCreate(db);
            }
        }
-
-
-
    }
 }
