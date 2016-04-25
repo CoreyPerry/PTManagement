@@ -34,7 +34,7 @@ public class CustomerListActivity extends AppCompatActivity {
         });
     }
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_options_menu, menu);
@@ -52,5 +52,5 @@ public class CustomerListActivity extends AppCompatActivity {
             startActivity(item.getIntent());
         }
         return true;
-    }
+    }*/
 }

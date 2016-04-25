@@ -1,6 +1,9 @@
 package com.perrypt.ptmanagement;
 
+import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,8 +13,33 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+
+import com.perrypt.ptmanagement.database.CustomerDbSchema;
+
+import java.util.jar.Attributes;
 
 public class AddNewCustomerActivity extends AppCompatActivity {
+
+
+    private Context mContext;
+    private SQLiteDatabase mDatabase;
+
+
+    private AddNewCustomerActivity(Context context) {
+
+    }
+
+
+    /*private static ContentValues getContentValues(Context context) {
+        ContentValues values = new ContentValues();
+        values.put(CustomerDbSchema.CustomerTable.Cols.Name, name);
+        values.put(CustomerDbSchema.CustomerTable.Cols.Height,height);
+        values.put(CustomerDbSchema.CustomerTable.Cols.Weight,weight);
+        values.put(CustomerDbSchema.CustomerTable.Cols.Age, age);
+
+        return values;
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +57,7 @@ public class AddNewCustomerActivity extends AppCompatActivity {
             }
         });
     }
-    @Override
+   /* @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_options_menu, menu);
@@ -47,5 +75,5 @@ public class AddNewCustomerActivity extends AppCompatActivity {
             startActivity(item.getIntent());
         }
         return true;
-    }
+    }*/
 }
